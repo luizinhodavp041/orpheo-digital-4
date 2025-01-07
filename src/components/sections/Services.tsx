@@ -83,7 +83,7 @@ export function Services() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="relative flex flex-col p-6 bg-background-secondary border-border hover:border-accent transition-colors duration-300 overflow-hidden"
+              className="relative flex flex-col p-6 bg-background-secondary border-border transition-all duration-300 overflow-hidden group"
               style={{
                 boxShadow:
                   "0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3)",
@@ -93,6 +93,23 @@ export function Services() {
               <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#111113] to-transparent z-10"></div>
               <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#111113] to-transparent z-10"></div>
 
+              {/* Gradiente hover e pattern */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                {/* Gradiente */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent"></div>
+              </div>
+
+              {/* Pattern de bolinhas - Sempre visível mas mais suave */}
+              <div
+                className="absolute inset-0 mix-blend-soft-light opacity-0 group-hover:opacity-100 transition-all duration-500"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle, rgba(0, 220, 130, 0.6) 1px, transparent 1px)",
+                  backgroundSize: "24px 24px",
+                  backgroundPosition: "0 0",
+                }}
+              ></div>
+
               <div className="relative z-20">
                 <div className="rounded-lg p-3 bg-background inline-flex items-center justify-center mb-4">
                   {service.icon}
@@ -100,6 +117,9 @@ export function Services() {
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-text-secondary">{service.description}</p>
               </div>
+
+              {/* Borda hover */}
+              <div className="absolute inset-0 border border-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Card>
           ))}
         </div>
