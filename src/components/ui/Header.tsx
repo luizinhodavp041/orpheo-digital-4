@@ -21,7 +21,7 @@ export function Header() {
         isScrolled ? "bg-background py-4" : "bg-transparent py-6"
       }`}
     >
-      <div className="container flex items-center justify-between">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-lg bg-accent"></div>
           <span className="text-xl font-bold text-text">Brand</span>
