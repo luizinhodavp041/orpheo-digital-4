@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isAtTop ? "bg-transparent backdrop-blur-sm" : "translate-y-[-100%]"
+        isAtTop ? "bg-transparent" : "translate-y-[-100%]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

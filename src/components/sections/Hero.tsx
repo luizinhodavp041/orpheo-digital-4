@@ -5,12 +5,12 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center bg-background relative">
       {/* Gradiente sutil no topo do Hero para melhorar legibilidade do header */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background/50 to-transparent"></div>
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/50 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-20">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-block mb-6">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-background-secondary/50 backdrop-blur-sm">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-background-secondary/80">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
               <p className="text-sm text-text-secondary">
                 New Feature Released
