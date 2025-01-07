@@ -9,9 +9,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Altura do Hero - altura do Header
-      const heroHeight = window.innerHeight - 80; // 80px é aproximadamente a altura do header
-      setIsAtTop(window.scrollY < heroHeight);
+      setIsAtTop(window.scrollY === 0);
     };
 
     window.addEventListener("scroll", handleScroll);

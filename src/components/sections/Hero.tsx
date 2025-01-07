@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center relative">
+    <section className="min-h-screen flex items-center bg-background relative">
       {/* Gradiente sutil no topo do Hero para melhorar legibilidade do header */}
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/50 to-transparent"></div>
 
