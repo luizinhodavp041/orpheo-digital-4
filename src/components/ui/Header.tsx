@@ -21,43 +21,45 @@ export function Header() {
         isScrolled ? "bg-background py-4" : "bg-transparent py-6"
       }`}
     >
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-accent"></div>
-          <span className="text-xl font-bold text-text">Brand</span>
-        </Link>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="h-8 w-8 rounded-lg bg-accent"></div>
+            <span className="text-xl font-bold text-text">Brand</span>
+          </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
-          <Link
-            href="#features"
-            className="text-text-secondary hover:text-text transition-colors"
-          >
-            Features
-          </Link>
-          <Link
-            href="#pricing"
-            className="text-text-secondary hover:text-text transition-colors"
-          >
-            Pricing
-          </Link>
-          <Link
-            href="#about"
-            className="text-text-secondary hover:text-text transition-colors"
-          >
-            About
-          </Link>
-        </nav>
+          <nav className="hidden md:flex items-center gap-8">
+            <Link
+              href="#features"
+              className="text-text-secondary hover:text-text transition-colors"
+            >
+              Features
+            </Link>
+            <Link
+              href="#pricing"
+              className="text-text-secondary hover:text-text transition-colors"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="#about"
+              className="text-text-secondary hover:text-text transition-colors"
+            >
+              About
+            </Link>
+          </nav>
 
-        <div className="flex items-center gap-4">
-          <Button
-            variant="outline"
-            className="border-border text-text hover:bg-background-secondary"
-          >
-            Log in
-          </Button>
-          <Button className="bg-accent text-background hover:bg-accent/90">
-            Get Started
-          </Button>
+          <div className="flex items-center gap-4">
+            <Button
+              variant="outline"
+              className="border-border text-text hover:bg-background-secondary"
+            >
+              Log in
+            </Button>
+            <Button className="bg-accent text-background hover:bg-accent/90">
+              Get Started
+            </Button>
+          </div>
         </div>
       </div>
     </header>
