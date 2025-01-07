@@ -5,12 +5,15 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // Altura do Hero - altura do Header
+      const heroHeight = window.innerHeight - 80; // 80px é aproximadamente a altura do header
+      setIsAtTop(window.scrollY < heroHeight);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -18,11 +21,11 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background py-4" : "bg-transparent py-6"
+        isAtTop ? "bg-transparent backdrop-blur-sm" : "translate-y-[-100%]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between py-6">
           <Link href="/" className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-accent"></div>
             <span className="text-xl font-bold text-text">Brand</span>
@@ -31,19 +34,19 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <Link
               href="#features"
-              className="text-text-secondary hover:text-text transition-colors"
+              className="text-text hover:text-accent transition-colors"
             >
               Features
             </Link>
             <Link
               href="#pricing"
-              className="text-text-secondary hover:text-text transition-colors"
+              className="text-text hover:text-accent transition-colors"
             >
               Pricing
             </Link>
             <Link
               href="#about"
-              className="text-text-secondary hover:text-text transition-colors"
+              className="text-text hover:text-accent transition-colors"
             >
               About
             </Link>
@@ -52,7 +55,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <Button
               variant="outline"
-              className="border-border text-text hover:bg-background-secondary"
+              className="border-border text-text hover:bg-background-secondary/50"
             >
               Log in
             </Button>
