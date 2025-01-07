@@ -10,14 +10,14 @@ import { About } from "@/components/sections/About";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-background">
       <Header />
       <Hero />
+      <About />
       <Services />
       <Features />
-      <About />
-      <Testimonials />
       <Objections />
+      <Testimonials />
       <Cta />
       <Footer />
     </main>
