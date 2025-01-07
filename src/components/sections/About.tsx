@@ -17,20 +17,32 @@ export function About() {
     },
   ];
 
+  const stats = [
+    {
+      number: "5+",
+      label: "Anos de experiência",
+    },
+    {
+      number: "100+",
+      label: "Projetos entregues",
+    },
+    {
+      number: "98%",
+      label: "Clientes satisfeitos",
+    },
+  ];
+
   return (
     <section className="py-20 bg-background" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Imagem */}
-          <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+          <div className="relative aspect-square lg:aspect-auto lg:h-[600px] rounded-lg overflow-hidden">
             <div className="absolute inset-0 bg-background-secondary border border-border rounded-lg">
-              {/* Placeholder para a imagem do time */}
-              <img
-                src="/api/placeholder/800/600"
-                alt="Nossa equipe"
-                className="w-full h-full object-cover"
-              />
-              {/* Gradiente overlay para combinar com o tema */}
+              <div className="h-full w-full flex items-center justify-center text-text-secondary">
+                <p className="text-lg">Image Placeholder</p>
+              </div>
+              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-60"></div>
             </div>
           </div>
@@ -42,7 +54,7 @@ export function About() {
               <h2 className="text-4xl font-bold mb-4">
                 Uma equipe apaixonada por criar soluções digitais inovadoras
               </h2>
-              <p className="text-text-secondary text-lg mb-6">
+              <p className="text-text-secondary text-lg">
                 Combinamos experiência técnica com criatividade para transformar
                 ideias em realidade digital. Nossa missão é entregar soluções
                 que não apenas atendam, mas superem as expectativas dos nossos
@@ -50,21 +62,21 @@ export function About() {
               </p>
             </div>
 
-            {/* Stats ou highlights */}
-            <div className="grid grid-cols-2 gap-6 py-6">
-              <div>
-                <div className="text-3xl font-bold text-accent mb-2">5+</div>
-                <div className="text-text-secondary">Anos de experiência</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-accent mb-2">100+</div>
-                <div className="text-text-secondary">Projetos entregues</div>
-              </div>
+            {/* Stats em linha horizontal */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-accent mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-text-secondary">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Cards de valores - Agora em uma linha horizontal */}
+        {/* Cards de valores */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           {values.map((value, index) => (
             <div
