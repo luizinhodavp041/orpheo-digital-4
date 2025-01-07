@@ -9,7 +9,7 @@ import { Footer } from "@/components/ui/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-background">
+    <main>
       <Header />
       <Hero />
       <Services />
