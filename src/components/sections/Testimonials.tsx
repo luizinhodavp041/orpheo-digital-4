@@ -53,7 +53,7 @@ export function Testimonials() {
 
                 {/* Content */}
                 <blockquote className="text-lg flex-1">
-                  "{testimonial.content}"
+                  &ldquo;{testimonial.content}&rdquo;
                 </blockquote>
 
                 {/* Author */}
