@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Objections } from "@/components/sections/Objections";
 import { Cta } from "@/components/sections/Cta";
 import { Footer } from "@/components/ui/Footer";
+import { About } from "@/components/sections/About";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Features />
+      <About />
       <Testimonials />
       <Objections />
       <Cta />

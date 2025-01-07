@@ -49,8 +49,8 @@ export function Header() {
               About
             </Link>
           </nav>
-
-          <div className="flex items-center gap-4">
+          {/* botões */}
+          {/* <div className="flex items-center gap-4">
             <Button
               variant="outline"
               className="border-border text-text hover:bg-background-secondary/50"
@@ -60,7 +60,7 @@ export function Header() {
             <Button className="bg-accent text-background hover:bg-accent/90">
               Get Started
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
