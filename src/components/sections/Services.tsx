@@ -63,7 +63,10 @@ const services = [
 
 export function Services() {
   return (
-    <section className="py-20 bg-background">
+    <section
+      className="py-20 relative"
+      style={{ background: "var(--background)" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -75,26 +78,30 @@ export function Services() {
           </p>
         </div>
 
-        <div className="relative">
-          {/* Gradient Fade Effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10"></div>
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <Card
+              key={index}
+              className="relative flex flex-col p-6 bg-background-secondary border-border hover:border-accent transition-colors duration-300 overflow-hidden"
+              style={{
+                boxShadow:
+                  "0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3)",
+              }}
+            >
+              {/* Gradientes dentro do card */}
+              <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#111113] to-transparent z-10"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#111113] to-transparent z-10"></div>
 
-          {/* Grid Container */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mx-6">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="flex flex-col p-6 bg-background-secondary border-border hover:border-accent transition-colors duration-300"
-              >
+              <div className="relative z-20">
                 <div className="rounded-lg p-3 bg-background inline-flex items-center justify-center mb-4">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-text-secondary">{service.description}</p>
-              </Card>
-            ))}
-          </div>
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
