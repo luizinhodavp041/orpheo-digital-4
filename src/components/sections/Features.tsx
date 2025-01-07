@@ -1,3 +1,4 @@
+// components/sections/Features.tsx
 import { Check, Triangle } from "lucide-react";
 
 export function Features() {
@@ -42,7 +43,7 @@ export function Features() {
   );
 
   const ImagePlaceholder = () => (
-    <div className="relative aspect-square lg:aspect-auto lg:h-[600px] rounded-lg overflow-hidden">
+    <div className="relative aspect-square md:aspect-auto md:h-[600px] rounded-lg overflow-hidden">
       <div className="absolute inset-0 bg-background-secondary border border-border rounded-lg">
         <div className="h-full w-full flex items-center justify-center text-text-secondary">
           <p className="text-lg">Image Placeholder</p>
@@ -54,10 +55,10 @@ export function Features() {
   );
 
   return (
-    <section className="py-20 ">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* First Feature Block - with check icons */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-32">
+        {/* First Feature Block */}
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-32">
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
               Long headline on two lines to turn your visitors into users and
@@ -75,13 +76,13 @@ export function Features() {
           <ImagePlaceholder />
         </div>
 
-        {/* Second Feature Block - with triangle icons */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
+        {/* Second Feature Block */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="order-2 md:order-1">
             <ImagePlaceholder />
           </div>
 
-          <div className="space-y-8 order-1 lg:order-2">
+          <div className="space-y-8 order-1 md:order-2">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
               Another compelling headline to showcase your amazing features
             </h2>
