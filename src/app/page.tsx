@@ -7,6 +7,7 @@ import { Objections } from "@/components/sections/Objections";
 import { Cta } from "@/components/sections/Cta";
 import { Footer } from "@/components/ui/Footer";
 import { About } from "@/components/sections/About";
+import { Fireworks } from "@/components/sections/Fireworks";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Testimonials />
       <Cta />
       <Footer />
+      <Fireworks />
     </main>
   );
 }
