@@ -9,55 +9,64 @@ import {
   LineChart,
   Users,
   Cloud,
+  Calendar,
+  Activity,
+  Share2,
+  Globe,
+  Palette,
+  Settings,
+  MessageCircle,
 } from "lucide-react";
 
 const services = [
   {
+    icon: <Calendar className="h-6 w-6 text-accent" />,
+    title: "Cronograma Estratégico",
+    description:
+      "Planejamento personalizado e estratégico para alcançar seus objetivos de negócio.",
+  },
+  {
+    icon: <Activity className="h-6 w-6 text-accent" />,
+    title: "Gestão de Tráfego",
+    description:
+      "Estratégias eficientes de tráfego pago para maximizar seu retorno sobre investimento.",
+  },
+  {
+    icon: <Share2 className="h-6 w-6 text-accent" />,
+    title: "Redes Sociais",
+    description:
+      "Gerenciamento completo de redes sociais para fortalecer sua presença digital.",
+  },
+  {
+    icon: <Globe className="h-6 w-6 text-accent" />,
+    title: "Presença Online",
+    description:
+      "Gestão estratégica da sua presença digital para construir autoridade e visibilidade.",
+  },
+  {
     icon: <Code2 className="h-6 w-6 text-accent" />,
-    title: "API Integration",
+    title: "Desenvolvimento Web",
     description:
-      "Seamless API integration with extensive documentation and support.",
+      "Criação de sites, plataformas, sistemas e landing pages otimizados e responsivos.",
   },
   {
-    icon: <Rocket className="h-6 w-6 text-accent" />,
-    title: "Quick Deploy",
+    icon: <Palette className="h-6 w-6 text-accent" />,
+    title: "Branding e Design",
     description:
-      "Deploy your applications in seconds with our streamlined infrastructure.",
+      "Design estratégico e identidade visual que conecta sua marca com seu público.",
   },
   {
-    icon: <Shield className="h-6 w-6 text-accent" />,
-    title: "Enterprise Security",
+    icon: <Settings className="h-6 w-6 text-accent" />,
+    title: "Automação de Processos",
     description:
-      "Bank-grade security with advanced encryption and compliance features.",
+      "Soluções de automação empresarial para otimizar e escalar suas operações.",
   },
   {
-    icon: <Zap className="h-6 w-6 text-accent" />,
-    title: "High Performance",
+    icon: <MessageCircle className="h-6 w-6 text-accent" />,
+    title: "Não Encontrou o Que Procura?",
     description:
-      "Lightning-fast performance with global edge network distribution.",
-  },
-  {
-    icon: <Code2 className="h-6 w-6 text-accent" />,
-    title: "Developer Tools",
-    description:
-      "Comprehensive suite of tools to boost your development workflow.",
-  },
-  {
-    icon: <LineChart className="h-6 w-6 text-accent" />,
-    title: "Analytics",
-    description:
-      "Deep insights and metrics to understand your application's performance.",
-  },
-  {
-    icon: <Users className="h-6 w-6 text-accent" />,
-    title: "Team Collaboration",
-    description:
-      "Built-in features for seamless team coordination and management.",
-  },
-  {
-    icon: <Cloud className="h-6 w-6 text-accent" />,
-    title: "Cloud Storage",
-    description: "Scalable cloud storage solutions with automatic backups.",
+      "Cada negócio é único. Conte-nos seu desafio e descubra como podemos ajudar sua empresa a crescer.",
+    buttonText: "Vamos Conversar",
   },
 ];
 
@@ -70,11 +79,11 @@ export function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Everything you need to scale
+            Tudo que você precisa para escalar
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            Comprehensive suite of tools and services to help you build, deploy,
-            and grow your applications.
+            Conjunto completo de ferramentas e serviços para ajudar você a
+            desenvolver, lançar e escalar suas aplicações
           </p>
         </div>
 
