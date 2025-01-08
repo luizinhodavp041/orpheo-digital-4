@@ -89,7 +89,7 @@ export function Fireworks() {
       color: string;
       particles: Particle[] = [];
       trail: Array<{ x: number; y: number; alpha: number }> = [];
-      trailLength: number = 10;
+      trailLength: number = 25; // Aumentado de 10 para 25
 
       constructor(canvasWidth: number, canvasHeight: number) {
         this.x = Math.random() * canvasWidth;
