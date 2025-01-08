@@ -42,7 +42,7 @@ export function Fireworks() {
         this.color = color;
         this.size = size;
         this.trail = [];
-        this.trailLength = 5; // Comprimento da trail
+        this.trailLength = 25; // Trail mais longa para movimento mais fluído
       }
 
       update() {
@@ -93,14 +93,14 @@ export function Fireworks() {
       constructor(canvasWidth: number, canvasHeight: number) {
         this.x = Math.random() * canvasWidth;
         this.y = canvasHeight;
-        this.vy = -Math.random() * 5 - 10;
+        this.vy = -Math.random() * 3 - 8; // Reduzido de (5 + 10) para (3 + 8)
         this.color = "#00DC82";
         this.particles = [];
         this.trail = [];
       }
 
       explode() {
-        const particleCount = 100;
+        const particleCount = 150; // Mais partículas para efeito mais suave
         for (let i = 0; i < particleCount; i++) {
           this.particles.push(new Particle(this.x, this.y, this.color));
         }
@@ -110,7 +110,7 @@ export function Fireworks() {
         if (this.particles.length === 0) {
           // Trail do foguete subindo
           this.trail.push({ x: this.x, y: this.y, alpha: 1 });
-          if (this.trail.length > 10) this.trail.shift();
+          if (this.trail.length > 20) this.trail.shift(); // Aumentado de 10 para 20
 
           this.y += this.vy;
           return this.y > 0;
@@ -156,7 +156,8 @@ export function Fireworks() {
       // Define como as cores vão se misturar
       ctx.globalCompositeOperation = "screen";
 
-      if (timestamp - lastLaunch > 800) {
+      if (timestamp - lastLaunch > 1200) {
+        // Aumentado de 800 para 1200 (mais tempo entre lançamentos)
         rockets.push(new Rocket(canvas.width, canvas.height));
         lastLaunch = timestamp;
       }
