@@ -13,7 +13,6 @@ export function Fireworks() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Configurar tamanho do canvas
     const setCanvasSize = () => {
       canvas.width = canvas.offsetWidth;
       canvas.height = canvas.offsetHeight;
@@ -21,7 +20,6 @@ export function Fireworks() {
     setCanvasSize();
     window.addEventListener("resize", setCanvasSize);
 
-    // Classes para fogos de artifício
     class Particle {
       x: number;
       y: number;
@@ -30,6 +28,8 @@ export function Fireworks() {
       alpha: number;
       color: string;
       size: number;
+      trail: { x: number; y: number; alpha: number }[];
+      trailLength: number;
 
       constructor(x: number, y: number, color: string, size = 2) {
         this.x = x;
@@ -41,24 +41,44 @@ export function Fireworks() {
         this.alpha = 1;
         this.color = color;
         this.size = size;
+        this.trail = [];
+        this.trailLength = 5; // Comprimento da trail
       }
 
       update() {
+        // Adiciona posição atual à trail
+        this.trail.push({ x: this.x, y: this.y, alpha: this.alpha });
+
+        // Mantém apenas os últimos N pontos
+        if (this.trail.length > this.trailLength) {
+          this.trail.shift();
+        }
+
+        // Atualiza posição
         this.x += this.vx;
         this.y += this.vy;
         this.vy += 0.05; // gravidade
-        this.alpha *= 0.98; // fade out
+        this.alpha *= 0.96; // fade out
         return this.alpha > 0.1;
       }
 
       draw(ctx: CanvasRenderingContext2D) {
-        ctx.save();
-        ctx.globalAlpha = this.alpha;
-        ctx.fillStyle = this.color;
+        // Desenha a trail
+        this.trail.forEach((point, index) => {
+          const fadeAlpha = (index / this.trail.length) * point.alpha;
+          ctx.beginPath();
+          ctx.arc(point.x, point.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.globalAlpha = fadeAlpha * 0.5;
+          ctx.fill();
+        });
+
+        // Desenha a partícula atual
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.globalAlpha = this.alpha;
         ctx.fill();
-        ctx.restore();
       }
     }
 
@@ -68,6 +88,7 @@ export function Fireworks() {
       vy: number;
       color: string;
       particles: Particle[];
+      trail: { x: number; y: number; alpha: number }[];
 
       constructor(canvasWidth: number, canvasHeight: number) {
         this.x = Math.random() * canvasWidth;
@@ -75,6 +96,7 @@ export function Fireworks() {
         this.vy = -Math.random() * 5 - 10;
         this.color = "#00DC82";
         this.particles = [];
+        this.trail = [];
       }
 
       explode() {
@@ -86,6 +108,10 @@ export function Fireworks() {
 
       update() {
         if (this.particles.length === 0) {
+          // Trail do foguete subindo
+          this.trail.push({ x: this.x, y: this.y, alpha: 1 });
+          if (this.trail.length > 10) this.trail.shift();
+
           this.y += this.vy;
           return this.y > 0;
         }
@@ -96,40 +122,45 @@ export function Fireworks() {
 
       draw(ctx: CanvasRenderingContext2D) {
         if (this.particles.length === 0) {
+          // Desenha a trail do foguete
+          this.trail.forEach((point, index) => {
+            const fadeAlpha = (index / this.trail.length) * 0.5;
+            ctx.fillStyle = this.color;
+            ctx.globalAlpha = fadeAlpha;
+            ctx.beginPath();
+            ctx.arc(point.x, point.y, 2, 0, Math.PI * 2);
+            ctx.fill();
+          });
+
+          // Desenha o foguete
+          ctx.globalAlpha = 1;
           ctx.fillStyle = this.color;
           ctx.beginPath();
           ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
           ctx.fill();
-
-          // Trilha do foguete
-          ctx.beginPath();
-          ctx.strokeStyle = this.color;
-          ctx.lineWidth = 1;
-          ctx.moveTo(this.x, this.y);
-          ctx.lineTo(this.x, this.y + 10);
-          ctx.stroke();
         } else {
           this.particles.forEach((particle) => particle.draw(ctx));
         }
       }
     }
 
-    // Array para armazenar os fogos
     let rockets: Rocket[] = [];
     let lastLaunch = 0;
 
-    // Função de animação
     const animate = (timestamp: number) => {
-      ctx.fillStyle = "rgba(10, 10, 11, 0.2)";
+      // Limpa o canvas completamente
+      ctx.globalCompositeOperation = "source-over";
+      ctx.fillStyle = "#0A0A0B";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Lançar novo foguete
+      // Define como as cores vão se misturar
+      ctx.globalCompositeOperation = "screen";
+
       if (timestamp - lastLaunch > 800) {
         rockets.push(new Rocket(canvas.width, canvas.height));
         lastLaunch = timestamp;
       }
 
-      // Atualizar e desenhar fogos
       rockets = rockets.filter((rocket) => {
         if (rocket.particles.length === 0 && rocket.y < canvas.height * 0.4) {
           rocket.explode();
@@ -142,10 +173,8 @@ export function Fireworks() {
       requestAnimationFrame(animate);
     };
 
-    // Iniciar animação
     requestAnimationFrame(animate);
 
-    // Cleanup
     return () => {
       window.removeEventListener("resize", setCanvasSize);
     };
