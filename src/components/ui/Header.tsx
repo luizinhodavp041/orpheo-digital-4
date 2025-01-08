@@ -26,7 +26,7 @@ export function Header() {
         <div className="flex items-center justify-between py-6">
           <Link href="/" className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-accent"></div>
-            <span className="text-xl font-bold text-text">Brand</span>
+            <span className="text-xl font-bold text-text">Orpheo Digital</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -34,19 +34,31 @@ export function Header() {
               href="#features"
               className="text-text hover:text-accent transition-colors"
             >
-              Features
+              Quem somos
             </Link>
             <Link
               href="#pricing"
               className="text-text hover:text-accent transition-colors"
             >
-              Pricing
+              Serviços
             </Link>
             <Link
               href="#about"
               className="text-text hover:text-accent transition-colors"
             >
-              About
+              Recursos
+            </Link>
+            <Link
+              href="#about"
+              className="text-text hover:text-accent transition-colors"
+            >
+              Dúvidas
+            </Link>
+            <Link
+              href="#about"
+              className="text-text hover:text-accent transition-colors"
+            >
+              Depoimentos
             </Link>
           </nav>
           {/* botões */}
