@@ -47,7 +47,7 @@ export function ScrollProgress() {
   return (
     <>
       <div className="fixed bottom-6 right-6 z-50">
-        <div className="relative flex items-center justify-center">
+        <div className="relative flex items-center justify-center bg-black/50 rounded-xl p-3">
           <svg className="transform -rotate-90" width={size} height={size}>
             {/* Círculo de fundo */}
             <circle
@@ -80,7 +80,7 @@ export function ScrollProgress() {
 
         {/* Popup */}
         <div
-          className={`absolute bottom-full right-0 mb-4 w-72 bg-background-secondary border border-border rounded-lg p-4 transform transition-all duration-300 ${
+          className={`absolute bottom-[calc(100%+0.5rem)] right-0 w-72 bg-background-secondary border border-border rounded-lg p-4 transform transition-all duration-300 ${
             showPopup
               ? "translate-y-0 opacity-100 shadow-lg"
               : "translate-y-8 opacity-0 pointer-events-none"
