@@ -4,16 +4,16 @@ import { Check, Triangle } from "lucide-react";
 export function Features() {
   const featuresList = {
     first: [
-      "Easily integrate with your existing workflow and tools",
-      "Advanced analytics to track your business growth",
-      "Automated deployment pipeline for faster releases",
-      "24/7 dedicated support team at your service",
+      "Planejamento estratégico baseado em dados e resultados",
+      "Gestão integrada de campanhas e redes sociais",
+      "Automação inteligente de processos empresariais",
+      "Suporte especializado em todas as etapas do projeto",
     ],
     second: [
-      "Scalable infrastructure that grows with your needs",
-      "Real-time monitoring and performance insights",
-      "Enterprise-grade security and compliance",
-      "Customizable solutions for your business",
+      "Desenvolvimento de plataformas sob medida",
+      "Análise em tempo real do desempenho digital",
+      "Design e branding com foco em conversão",
+      "Otimização constante de resultados",
     ],
   };
 
@@ -61,13 +61,13 @@ export function Features() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-32">
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Long headline on two lines to turn your visitors into users and
-              achieve more
+              Acelere o crescimento do seu negócio com soluções digitais
+              integradas
             </h2>
 
             <p className="text-lg text-text-secondary">
-              Transform your business with our powerful platform. Build, scale,
-              and grow your applications with confidence.
+              Combinamos tecnologia e estratégia para criar um ecossistema
+              digital que potencializa os resultados da sua empresa.
             </p>
 
             <FeatureList features={featuresList.first} variant="check" />
@@ -84,12 +84,12 @@ export function Features() {
 
           <div className="space-y-8 order-1 md:order-2">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Another compelling headline to showcase your amazing features
+              Desbloqueie todo o potencial do seu negócio no ambiente digital
             </h2>
 
             <p className="text-lg text-text-secondary">
-              Empower your team with cutting-edge tools and technologies.
-              Streamline your workflow and boost productivity.
+              Da estratégia à implementação, nossa equipe especializada
+              desenvolve soluções que impulsionam seu crescimento.
             </p>
 
             <FeatureList features={featuresList.second} variant="triangle" />
