@@ -6,14 +6,18 @@ import { Fireworks } from "@/components/sections/Fireworks";
 export function Cta() {
   return (
     <section id="cta-section" className="relative py-20">
-      {/* Fireworks background */}
-      <div className="absolute inset-0 -z-10">
+      {/* Background base */}
+      <div className="absolute inset-0 bg-background" />
+
+      {/* Fireworks layer */}
+      <div className="absolute inset-0">
         <Fireworks />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl bg-background/80 backdrop-blur-sm">
-          <div className="relative px-8 py-16 md:py-20 text-center">
+      {/* Content layer */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-2xl bg-background/30 backdrop-blur-sm">
+          <div className="px-8 py-16 md:py-20 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-text">
               Start building your next project today
             </h2>
