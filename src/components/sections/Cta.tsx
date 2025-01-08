@@ -1,9 +1,10 @@
+// components/sections/Cta.tsx
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Cta() {
   return (
-    <section className="py-20 bg-background">
+    <section id="cta-section" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-2xl bg-accent">
           {/* Gradient overlay */}
