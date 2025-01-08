@@ -5,7 +5,7 @@ import { Fireworks } from "@/components/sections/Fireworks";
 
 export function Cta() {
   return (
-    <section id="cta-section" className="relative py-20">
+    <section id="cta-section" className="relative h-[400px] flex items-center">
       {/* Background base */}
       <div className="absolute inset-0 bg-background" />
 
@@ -15,7 +15,7 @@ export function Cta() {
       </div>
 
       {/* Content layer */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl bg-background/30 backdrop-blur-sm">
           <div className="px-8 py-16 md:py-20 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-text">
