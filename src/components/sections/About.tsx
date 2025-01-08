@@ -19,16 +19,16 @@ export function About() {
 
   const stats = [
     {
-      number: "5+",
-      label: "Anos de experiência",
+      number: "8x",
+      label: "Mais agilidade",
     },
     {
-      number: "100+",
-      label: "Projetos entregues",
+      number: "360°",
+      label: "Soluções completas",
     },
     {
-      number: "98%",
-      label: "Clientes satisfeitos",
+      number: "100%",
+      label: "Soluções personalizadas",
     },
   ];
 
