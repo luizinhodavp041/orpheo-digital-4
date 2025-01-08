@@ -49,9 +49,9 @@ export function Hero() {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: "FOCO", label: "Resultados rápidos" },
+              { number: "8", label: "Serviços especializados" },
               { number: "98%", label: "Satisfação" },
               { number: "24/7", label: "Suporte" },
-              { number: "8", label: "Serviços especializados" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-2xl font-bold text-text">{stat.number}</p>
