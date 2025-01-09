@@ -80,31 +80,39 @@ export function ScrollProgress() {
 
         {/* Popup */}
         <div
-          className={`absolute bottom-[calc(100%+0.5rem)] right-0 w-72 bg-background-secondary border border-border rounded-lg p-4 transform transition-all duration-300 ${
+          className={`absolute bottom-[calc(100%+0.5rem)] right-0 w-96 bg-background-secondary border-2 border-accent rounded-lg p-6 transform transition-all duration-500 ${
             showPopup
-              ? "translate-y-0 opacity-100 shadow-lg"
-              : "translate-y-8 opacity-0 pointer-events-none"
+              ? "translate-y-0 opacity-100 scale-100 shadow-2xl"
+              : "translate-y-8 opacity-0 scale-95 pointer-events-none"
           }`}
         >
-          <button
-            onClick={() => setShowPopup(false)}
-            className="absolute top-2 right-2 text-text-secondary hover:text-text"
-          >
-            ×
-          </button>
-          <p className="text-sm mb-3">
-            Vejo que você chegou até o final e está interessado! Para isso,
-            temos uma promoção perfeita para você.
-          </p>
-          <Button
-            className="w-full bg-accent text-background hover:bg-accent/90"
-            onClick={() => {
-              // Aqui você pode adicionar a ação do botão
-              console.log("Clicou em Eu quero!");
-            }}
-          >
-            Eu quero!
-          </Button>
+          <div className="flex flex-col items-center text-center">
+            <div className="text-4xl mb-3">🎉</div>
+            <h3 className="text-xl font-bold mb-2">Oferta Especial!</h3>
+            <p className="text-base mb-4 text-text-secondary">
+              Parabéns por chegar até aqui! Como agradecimento, preparamos uma
+              condição exclusiva: 20% de desconto no primeiro mês de serviços.
+            </p>
+            <div className="flex flex-col gap-3 w-full">
+              <Button
+                className="w-full bg-accent text-background hover:bg-accent/90 py-3 text-lg font-semibold animate-pulse "
+                onClick={() => {
+                  console.log("Clicou em Aproveitar Agora!");
+                }}
+              >
+                Aproveitar Agora! ⚡
+              </Button>
+              <button
+                onClick={() => setShowPopup(false)}
+                className="text-text-secondary hover:text-text transition-colors text-sm"
+              >
+                Deixar para depois
+              </button>
+            </div>
+          </div>
+
+          {/* Efeito de brilho nos cantos */}
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-accent/30 to-accent/10 rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
         </div>
       </div>
     </>
