@@ -5,7 +5,7 @@ export function Testimonials() {
     {
       content:
         "A implementação da estratégia digital superou nossas expectativas. O retorno sobre investimento em mídia cresceu 85% nos primeiros 3 meses.",
-      author: "Marina Silva",
+      author: "Marina Almeida",
       rating: 5,
     },
     {
