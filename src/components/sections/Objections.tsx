@@ -8,29 +8,30 @@ import {
 export function Objections() {
   const objections = [
     {
-      question: "Is it difficult to get started with your platform?",
+      question: "Quanto tempo leva para ver resultados?",
       answer:
-        "Not at all! Our platform is designed to be intuitive and user-friendly. You can get started in minutes with our guided setup process and comprehensive documentation. Plus, our support team is always ready to help if you need assistance.",
+        "Cada projeto tem seu próprio ciclo, mas começamos a implementar melhorias desde o primeiro dia. Definimos metas claras e realizamos acompanhamento constante, com relatórios periódicos para você acompanhar a evolução dos resultados. Geralmente, nossos clientes começam a ver mudanças significativas nos primeiros 90 dias de trabalho.",
     },
     {
-      question: "What makes your solution different from others?",
+      question: "Por que devo escolher vocês como parceiros digitais?",
       answer:
-        "Unlike other platforms, we offer a complete end-to-end solution with advanced features, better performance, and superior customer support. Our platform is built with modern technologies and is constantly updated based on user feedback.",
+        "Diferente de outras agências, oferecemos soluções verdadeiramente integradas. Nossa equipe multidisciplinar trabalha de forma coordenada, garantindo que cada ação esteja alinhada com sua estratégia global. Além disso, somos transparentes em nossa comunicação e focados em resultados mensuráveis para seu negócio.",
     },
     {
-      question: "Do I need technical knowledge to use the platform?",
+      question: "Como funciona o processo de trabalho?",
       answer:
-        "While technical knowledge can be helpful, our platform is designed to be accessible to users of all skill levels. We provide intuitive interfaces and automation tools that make complex tasks simple.",
+        "Iniciamos com uma análise completa do seu negócio para entender suas necessidades e objetivos. A partir daí, desenvolvemos um planejamento estratégico personalizado, estabelecemos metas claras e implementamos as soluções de forma estruturada. Você recebe acompanhamento constante e tem acesso direto à nossa equipe durante todo o processo.",
     },
     {
-      question: "What kind of support do you offer?",
+      question:
+        "Vocês se adaptam às necessidades específicas da minha empresa?",
       answer:
-        "We provide 24/7 customer support through multiple channels including live chat, email, and phone. Our dedicated support team is highly trained and ready to assist you with any questions or issues you might encounter.",
+        "Absolutamente! Cada negócio é único, por isso desenvolvemos estratégias personalizadas para cada cliente. Adaptamos nossos serviços de acordo com seus objetivos, orçamento e necessidades específicas. Nossa abordagem flexível permite que o projeto evolua junto com seu negócio.",
     },
     {
-      question: "Is my data secure with your platform?",
+      question: "Quais são os investimentos e formas de pagamento?",
       answer:
-        "Absolutely! Security is our top priority. We use industry-standard encryption, regular security audits, and comply with major security certifications. Your data is protected with enterprise-grade security measures.",
+        "Oferecemos planos personalizados que se ajustam a diferentes necessidades e orçamentos. O investimento varia de acordo com os serviços contratados e a complexidade do projeto. Trabalhamos com diversas formas de pagamento e podemos criar um plano que se adeque à sua realidade. Entre em contato para uma proposta detalhada.",
     },
   ];
 
@@ -40,11 +41,11 @@ export function Objections() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Common questions, answered
+            Respondendo d úvidas Frequentes
           </h2>
           <p className="text-lg text-text-secondary">
-            Get answers to the most frequently asked questions about our
-            platform and services.
+            Tire suas principais dúvidas sobre nossos serviços e descubra como
+            podemos ajudar seu negócio.
           </p>
         </div>
 
