@@ -28,7 +28,10 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="h-8 w-8 rounded-lg bg-accent"></div>
-              <span className="text-xl font-bold">Orpheo Digital</span>
+              <span className="text-xl font-bold">
+                Orpheo Digital
+                <span className="text-xl font-bold text-accent">.</span>
+              </span>
             </div>
             <p className="text-text-secondary">
               Transformando negócios através de soluções digitais inovadoras e

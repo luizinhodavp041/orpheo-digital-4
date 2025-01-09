@@ -26,7 +26,10 @@ export function Header() {
         <div className="flex items-center justify-between py-6">
           <Link href="/" className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-accent"></div>
-            <span className="text-xl font-bold text-text">Orpheo Digital</span>
+            <span className="text-xl font-bold text-text">
+              Orpheo Digital
+              <span className="text-xl font-bold text-accent">.</span>
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
