@@ -2,22 +2,20 @@ import Link from "next/link";
 
 export function Footer() {
   const footerLinks = {
-    product: [
-      { name: "Features", href: "#" },
-      { name: "Pricing", href: "#" },
-      { name: "Documentation", href: "#" },
-      { name: "API Reference", href: "#" },
+    servicos: [
+      { name: "Marketing Digital", href: "#" },
+      { name: "Desenvolvimento", href: "#" },
+      { name: "Design", href: "#" },
+      { name: "Automação", href: "#" },
     ],
-    company: [
-      { name: "About", href: "#" },
-      { name: "Blog", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "Contact", href: "#" },
+    empresa: [
+      { name: "Sobre nós", href: "#" },
+      { name: "Contato", href: "#" },
     ],
     legal: [
-      { name: "Privacy", href: "#" },
-      { name: "Terms", href: "#" },
-      { name: "Security", href: "#" },
+      { name: "Privacidade", href: "#" },
+      { name: "Termos de uso", href: "#" },
+      { name: "Cookies", href: "#" },
     ],
   };
 
@@ -33,7 +31,8 @@ export function Footer() {
               <span className="text-xl font-bold">Brand</span>
             </div>
             <p className="text-text-secondary">
-              Building the future of web development, one project at a time.
+              Transformando negócios através de soluções digitais inovadoras e
+              resultados mensuráveis.
             </p>
           </div>
 
@@ -41,7 +40,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-3">
-              {footerLinks.product.map((link) => (
+              {footerLinks.servicos.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -57,7 +56,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
+              {footerLinks.empresa.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -89,13 +88,13 @@ export function Footer() {
 
         {/* Footer Bottom */}
         <div className="py-6 border-t border-border flex flex-col sm:flex-row justify-between items-center text-text-secondary">
-          <p>© 2024 Your Company. All rights reserved.</p>
+          <p>© 2024 Orpheo Digital. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 sm:mt-0">
             <Link href="#" className="hover:text-text">
-              Twitter
+              WhatsApp
             </Link>
             <Link href="#" className="hover:text-text">
-              GitHub
+              Instagram
             </Link>
             <Link href="#" className="hover:text-text">
               LinkedIn

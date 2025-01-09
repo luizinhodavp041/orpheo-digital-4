@@ -19,26 +19,26 @@ export function Cta() {
         <div className="rounded-2xl bg-background/30 backdrop-blur-sm">
           <div className="px-8 py-16 md:py-20 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-text">
-              Start building your next project today
+              Pronto para transformar seu negócio?
             </h2>
             <p className="text-lg mb-8 text-text-secondary max-w-2xl mx-auto">
-              Join thousands of developers and teams who are already creating
-              amazing products with our platform.
+              Agende uma consulta gratuita e descubra como nossas soluções
+              digitais podem impulsionar seus resultados.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
                 className="bg-accent text-background hover:bg-accent/90"
               >
-                Get Started Free
+                Falar com Especialista
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button
+              {/* <Button
                 size="lg"
                 className="bg-transparent border-2 border-text text-text hover:bg-text hover:text-background transition-colors"
               >
                 Contact Sales
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

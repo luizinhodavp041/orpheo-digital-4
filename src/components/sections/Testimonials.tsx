@@ -4,20 +4,20 @@ export function Testimonials() {
   const testimonials = [
     {
       content:
-        "This platform has completely transformed how we handle our deployment pipeline. The efficiency gains are remarkable.",
-      author: "Sarah Johnson",
+        "A implementação da estratégia digital superou nossas expectativas. O retorno sobre investimento em mídia cresceu 85% nos primeiros 3 meses.",
+      author: "Marina Silva",
       rating: 5,
     },
     {
       content:
-        "The level of customer support is outstanding. Every interaction has been professional and extremely helpful.",
-      author: "Michael Chen",
+        "O comprometimento da equipe é excepcional. Desde o planejamento até a execução, cada detalhe é cuidadosamente pensado para gerar resultados.",
+      author: "Ricardo Santos",
       rating: 5,
     },
     {
       content:
-        "We've seen a 40% increase in deployment speed since switching to this platform. It's been a game-changer for our team.",
-      author: "Emily Rodriguez",
+        "A automação dos processos reduziu em 60% nosso tempo operacional. A expertise técnica e estratégica da equipe fez toda diferença.",
+      author: "Carla Mendes",
       rating: 5,
     },
   ];
@@ -28,11 +28,11 @@ export function Testimonials() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Trusted by thousands of developers worldwide
+            Histórias de Sucesso
           </h2>
           <p className="text-lg text-text-secondary">
-            Join the community of successful teams who have transformed their
-            development workflow with our platform.
+            Conheça os resultados reais que nossos clientes alcançaram com
+            nossas soluções digitais integradas.
           </p>
         </div>
 
