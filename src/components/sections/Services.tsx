@@ -2,13 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import {
-  Rocket,
-  Shield,
-  Zap,
   Code2,
-  LineChart,
-  Users,
-  Cloud,
   Calendar,
   Activity,
   Share2,
