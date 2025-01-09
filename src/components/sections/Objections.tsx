@@ -41,7 +41,7 @@ export function Objections() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Respondendo d úvidas Frequentes
+            Respondendo dúvidas Frequentes
           </h2>
           <p className="text-lg text-text-secondary">
             Tire suas principais dúvidas sobre nossos serviços e descubra como
