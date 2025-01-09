@@ -38,7 +38,7 @@ export function Footer() {
 
           {/* Links Columns */}
           <div>
-            <h3 className="font-semibold mb-4">Product</h3>
+            <h3 className="font-semibold mb-4">Serviços</h3>
             <ul className="space-y-3">
               {footerLinks.servicos.map((link) => (
                 <li key={link.name}>
@@ -54,7 +54,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">Empresa</h3>
             <ul className="space-y-3">
               {footerLinks.empresa.map((link) => (
                 <li key={link.name}>
