@@ -91,7 +91,7 @@ export function Footer() {
 
         {/* Footer Bottom */}
         <div className="py-6 border-t border-border flex flex-col sm:flex-row justify-between items-center text-text-secondary">
-          <p>© 2024 Orpheo Digital. Todos os direitos reservados.</p>
+          <p>© 2025 Orpheo Digital. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 sm:mt-0">
             <Link href="#" className="hover:text-text">
               WhatsApp
