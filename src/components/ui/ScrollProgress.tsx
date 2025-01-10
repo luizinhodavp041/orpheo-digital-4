@@ -60,7 +60,7 @@ export function ScrollProgress() {
               cy={center}
               r={radius}
               fill="transparent"
-              stroke="#00DC82"
+              stroke="#26a1ff"
               strokeWidth={strokeWidth}
               strokeDasharray={circumference}
               strokeDashoffset={strokeDashoffset}
@@ -100,7 +100,7 @@ export function ScrollProgress() {
                     console.log("Clicou em Aproveitar Agora!");
                   }}
                 >
-                  Aproveitar Agora! ⚡
+                  Aproveitar Agora!
                 </Button>
                 <button
                   onClick={() => setShowPopup(false)}
