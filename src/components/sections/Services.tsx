@@ -67,7 +67,8 @@ const services = [
 export function Services() {
   return (
     <section
-      className="py-20 relative"
+      className="py-20 relative scroll-margin-top-38"
+      id="services"
       style={{ background: "var(--background)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -50,7 +50,7 @@ export function Objections() {
         </div>
 
         {/* Objections Accordion */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto" id="objections">
           <Accordion type="single" collapsible className="space-y-4">
             {objections.map((objection, index) => (
               <AccordionItem

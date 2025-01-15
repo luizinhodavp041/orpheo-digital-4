@@ -34,31 +34,31 @@ export function Header() {
 
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              href="#features"
+              href="#about"
               className="text-text hover:text-accent transition-colors"
             >
               Quem somos
             </Link>
             <Link
-              href="#pricing"
+              href="#services"
               className="text-text hover:text-accent transition-colors"
             >
               Serviços
             </Link>
             <Link
-              href="#about"
+              href="#features"
               className="text-text hover:text-accent transition-colors"
             >
               Recursos
             </Link>
             <Link
-              href="#about"
+              href="#objections"
               className="text-text hover:text-accent transition-colors"
             >
               Dúvidas
             </Link>
             <Link
-              href="#about"
+              href="#testimonials"
               className="text-text hover:text-accent transition-colors"
             >
               Depoimentos
