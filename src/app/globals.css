@@ -66,3 +66,11 @@
     display: none;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+#about {
+  scroll-margin-top: 80px;
+}
