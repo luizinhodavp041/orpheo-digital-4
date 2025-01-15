@@ -37,15 +37,15 @@ export function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Imagem */}
-          <div className="relative aspect-square lg:aspect-auto lg:h-[600px] rounded-lg overflow-hidden">
+          {/* <div className="relative aspect-square lg:aspect-auto lg:h-[600px] rounded-lg overflow-hidden">
             <div className="absolute inset-0 bg-background-secondary border border-border rounded-lg">
               <div className="h-full w-full flex items-center justify-center text-text-secondary">
                 <p className="text-lg">Image Placeholder</p>
-              </div>
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-60"></div>
+              </div> */}
+          {/* Gradient overlay */}
+          {/* <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-60"></div>
             </div>
-          </div>
+          </div> */}
 
           {/* Conteúdo */}
           <div className="space-y-6">
