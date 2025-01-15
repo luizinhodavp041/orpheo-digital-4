@@ -1,5 +1,5 @@
-// components/sections/Features.tsx
 import { Check, Triangle } from "lucide-react";
+import Image from "next/image";
 
 export function Features() {
   const featuresList = {
@@ -42,18 +42,6 @@ export function Features() {
     </div>
   );
 
-  const ImagePlaceholder = () => (
-    <div className="relative aspect-square md:aspect-auto md:h-[600px] rounded-lg overflow-hidden">
-      <div className="absolute inset-0 bg-background-secondary border border-border rounded-lg">
-        <div className="h-full w-full flex items-center justify-center text-text-secondary">
-          <p className="text-lg">Image Placeholder</p>
-        </div>
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-60"></div>
-      </div>
-    </div>
-  );
-
   return (
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,13 +61,27 @@ export function Features() {
             <FeatureList features={featuresList.first} variant="check" />
           </div>
 
-          <ImagePlaceholder />
+          <div className="relative aspect-square md:aspect-auto md:h-[600px] rounded-lg overflow-hidden">
+            <Image
+              src="/images/img-1.jpg"
+              alt="Soluções digitais integradas"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-60"></div>
+          </div>
         </div>
 
         {/* Second Feature Block */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <ImagePlaceholder />
+          <div className="order-2 md:order-1 relative aspect-square md:aspect-auto md:h-[600px] rounded-lg overflow-hidden">
+            <Image
+              src="/images/img-2.jpg"
+              alt="Potencial do seu negócio"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-60"></div>
           </div>
 
           <div className="space-y-8 order-1 md:order-2">
