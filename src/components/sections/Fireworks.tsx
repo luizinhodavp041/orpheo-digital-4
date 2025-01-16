@@ -95,7 +95,7 @@ export function Fireworks() {
         this.x = Math.random() * canvasWidth;
         this.y = canvasHeight;
         this.vy = -Math.random() * 5 - 10;
-        this.color = "#006cbf";
+        this.color = "#076aff";
         this.particles = [];
       }
 
