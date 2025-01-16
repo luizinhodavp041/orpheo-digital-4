@@ -1,7 +1,18 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export function Hero() {
+  const handleWhatsAppRedirect = () => {
+    const phoneNumber = "5541999189497"; // Substitua pelo número do WhatsApp (incluindo o código do país, sem + ou espaços)
+    const message = encodeURIComponent(
+      "Olá, gostaria de falar com um consultor sobre os serviços!"
+    );
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section className="min-h-screen flex items-center relative">
       {/* Gradiente sutil no topo do Hero para melhorar legibilidade do header */}
@@ -33,6 +44,7 @@ export function Hero() {
             <Button
               size="lg"
               className="bg-accent text-background hover:bg-accent/90"
+              onClick={handleWhatsAppRedirect}
             >
               Falar com nossos consultores
               <ArrowRight className="ml-2 h-4 w-4" />
