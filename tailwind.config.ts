@@ -28,7 +28,7 @@ const config = {
           DEFAULT: "#F8F8F8",
           secondary: "#BCBCBC",
         },
-        accent: "#26a1ff",
+        accent: "#0085ff",
       },
       keyframes: {
         "accordion-down": {
