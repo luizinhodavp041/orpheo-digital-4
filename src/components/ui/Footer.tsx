@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -27,7 +28,14 @@ export function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-accent"></div>
+              <div className="h-10 w-10 rounded-lg bg-accent relative overflow-hidden">
+                <Image
+                  src="/icon.png"
+                  alt="ícone"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
               <span className="text-xl font-bold">
                 Orpheo Digital
                 <span className="text-xl font-bold text-accent">.</span>
