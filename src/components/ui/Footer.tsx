@@ -24,10 +24,10 @@ export function Footer() {
     <footer className="bg-background border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="py-12 flex justify-center text-center">
           {/* Brand Column */}
-          <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
+          <div className="max-w-md">
+            <div className="flex items-center gap-2 mb-4 justify-center">
               <div className="h-10 w-10 rounded-lg bg-accent relative overflow-hidden">
                 <Image
                   src="/icon.png"
@@ -48,7 +48,7 @@ export function Footer() {
           </div>
 
           {/* Links Columns */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold mb-4">Serviços</h3>
             <ul className="space-y-3">
               {footerLinks.servicos.map((link) => (
@@ -94,22 +94,22 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Footer Bottom */}
         <div className="py-6 border-t border-border flex flex-col sm:flex-row justify-between items-center text-text-secondary">
           <p>© 2025 Orpheo Digital. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 sm:mt-0">
-            <Link href="#" className="hover:text-text">
+            <Link href="https://wa.me/+5541999189497?text=Ol%C3%A1%20*Orpheo%20Digital*%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20que%20voc%C3%AAs%20oferecem!" className="hover:text-text">
               WhatsApp
             </Link>
-            <Link href="#" className="hover:text-text">
+            <Link href="https://www.instagram.com/orpheodigital" className="hover:text-text">
               Instagram
             </Link>
-            <Link href="#" className="hover:text-text">
+            {/* <Link href="#" className="hover:text-text">
               LinkedIn
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

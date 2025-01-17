@@ -97,7 +97,10 @@ export function ScrollProgress() {
                 <Button
                   className="w-full bg-accent text-white hover:bg-accent/90 py-3 text-lg font-semibold animate-pulse"
                   onClick={() => {
-                    console.log("Clicou em Aproveitar Agora!");
+                    window.open(
+                      "https://wa.me/+5541999189497?text=Ol%C3%A1%20*Orpheo%20Digital*%2C%20gostaria%20de%20resgatar%20meu%20*DESCONTO%20DE%2020%25%20NO%20PRIMEIRO%20M%C3%8AS%20DE%20SERVI%C3%87OS*%20imediatamente!",
+                      "_blank"
+                    );
                   }}
                 >
                   Aproveitar Agora!

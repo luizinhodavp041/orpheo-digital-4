@@ -1,4 +1,5 @@
-// components/sections/Cta.tsx
+"use client"
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Fireworks } from "@/components/sections/Fireworks";
@@ -29,6 +30,12 @@ export function Cta() {
               <Button
                 size="lg"
                 className="bg-accent text-white hover:bg-accent/90"
+                onClick={() => {
+                  window.open(
+                    "https://wa.me/+5541999189497?text=Ol%C3%A1%20*Orpheo%20Digital*%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20os%20servi%C3%A7os%20que%20voc%C3%AAs%20oferecem!",
+                    "_blank"
+                  );
+                }}
               >
                 Falar com Especialista
                 <ArrowRight className="ml-2 h-4 w-4" />
