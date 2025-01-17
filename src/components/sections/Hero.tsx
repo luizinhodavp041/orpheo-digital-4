@@ -7,7 +7,7 @@ export function Hero() {
   const handleWhatsAppRedirect = () => {
     const phoneNumber = "5541999189497"; // Substitua pelo número do WhatsApp (incluindo o código do país, sem + ou espaços)
     const message = encodeURIComponent(
-      "Olá, gostaria de falar com um consultor sobre os serviços!"
+      "Olá, gostaria de falar com um consultor da Orpheo Digital sobre os serviços!"
     );
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappURL, "_blank");
@@ -53,6 +53,7 @@ export function Hero() {
               size="lg"
               variant="outline"
               className="border-border text-text hover:bg-background-secondary/50"
+              onClick={() => window.location.href = "#services"}
             >
               O que oferecemos
             </Button>
