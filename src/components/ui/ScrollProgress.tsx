@@ -95,7 +95,7 @@ export function ScrollProgress() {
               </p>
               <div className="flex flex-col gap-3 w-full">
                 <Button
-                  className="w-full bg-accent text-background hover:bg-accent/90 py-3 text-lg font-semibold animate-pulse"
+                  className="w-full bg-accent text-white hover:bg-accent/90 py-3 text-lg font-semibold animate-pulse"
                   onClick={() => {
                     console.log("Clicou em Aproveitar Agora!");
                   }}

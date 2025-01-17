@@ -28,7 +28,7 @@ export function Cta() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-accent text-background hover:bg-accent/90"
+                className="bg-accent text-white hover:bg-accent/90"
               >
                 Falar com Especialista
                 <ArrowRight className="ml-2 h-4 w-4" />

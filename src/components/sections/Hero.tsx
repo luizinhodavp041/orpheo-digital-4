@@ -43,7 +43,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="bg-accent text-background hover:bg-accent/90"
+              className="bg-accent text-white hover:bg-accent/90"
               onClick={handleWhatsAppRedirect}
             >
               Falar com nossos consultores
