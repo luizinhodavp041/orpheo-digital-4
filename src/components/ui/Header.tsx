@@ -1,26 +1,38 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
 export function Header() {
-  const [isAtTop, setIsAtTop] = useState(true);
+  const [isAtTop, setIsAtTop] = useState(true); // Inicia com o header visível (no topo)
 
   useEffect(() => {
+    // Recupera o estado salvo do localStorage, se houver
+    const savedState = localStorage.getItem("isAtTop");
+    if (savedState !== null) {
+      setIsAtTop(JSON.parse(savedState)); // Define o estado inicial com o valor armazenado
+    }
+
+    // Função de rolagem para esconder ou mostrar o header
     const handleScroll = () => {
-      setIsAtTop(window.scrollY === 0);
+      const newIsAtTop = window.scrollY === 0;
+      setIsAtTop(newIsAtTop); // Atualiza o estado conforme a rolagem
+
+      // Salva o estado no localStorage
+      localStorage.setItem("isAtTop", JSON.stringify(newIsAtTop));
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    // Limpeza do event listener ao desmontar o componente
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isAtTop ? "bg-transparent" : "translate-y-[-100%]"
+        isAtTop ? "bg-transparent" : "translate-y-[-100%]" // O header some ao rolar
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,9 +59,9 @@ export function Header() {
               onClick={(e) => {
                 e.preventDefault();
                 const element = document.getElementById("about");
-                if (!element) return; // verificação de nulidade
+                if (!element) return;
 
-                const offset = 7; // altura aproximada do header + espaço extra
+                const offset = 7;
                 const elementPosition =
                   element.getBoundingClientRect().top + window.scrollY;
                 window.scrollTo({
@@ -66,9 +78,9 @@ export function Header() {
               onClick={(e) => {
                 e.preventDefault();
                 const element = document.getElementById("services");
-                if (!element) return; // verificação de nulidade
+                if (!element) return;
 
-                const offset = 35; // altura aproximada do header + espaço extra
+                const offset = 35;
                 const elementPosition =
                   element.getBoundingClientRect().top + window.scrollY;
                 window.scrollTo({
@@ -85,9 +97,9 @@ export function Header() {
               onClick={(e) => {
                 e.preventDefault();
                 const element = document.getElementById("features");
-                if (!element) return; // verificação de nulidade
+                if (!element) return;
 
-                const offset = 10; // altura aproximada do header + espaço extra
+                const offset = 10;
                 const elementPosition =
                   element.getBoundingClientRect().top + window.scrollY;
                 window.scrollTo({
@@ -104,9 +116,9 @@ export function Header() {
               onClick={(e) => {
                 e.preventDefault();
                 const element = document.getElementById("objections");
-                if (!element) return; // verificação de nulidade
+                if (!element) return;
 
-                const offset = 369; // altura aproximada do header + espaço extra
+                const offset = 369;
                 const elementPosition =
                   element.getBoundingClientRect().top + window.scrollY;
                 window.scrollTo({
@@ -123,9 +135,9 @@ export function Header() {
               onClick={(e) => {
                 e.preventDefault();
                 const element = document.getElementById("testimonials");
-                if (!element) return; // verificação de nulidade
+                if (!element) return;
 
-                const offset = 100; // altura aproximada do header + espaço extra
+                const offset = 100;
                 const elementPosition =
                   element.getBoundingClientRect().top + window.scrollY;
                 window.scrollTo({
@@ -137,18 +149,6 @@ export function Header() {
               Depoimentos
             </Link>
           </nav>
-          {/* botões */}
-          {/* <div className="flex items-center gap-4">
-            <Button
-              variant="outline"
-              className="border-border text-text hover:bg-background-secondary/50"
-            >
-              Log in
-            </Button>
-            <Button className="bg-accent text-background hover:bg-accent/90">
-              Get Started
-            </Button>
-          </div> */}
         </div>
       </div>
     </header>
