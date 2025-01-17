@@ -5,34 +5,32 @@ import Link from "next/link";
 import Image from "next/image";
 
 export function Header() {
-  const [isAtTop, setIsAtTop] = useState(true); // Inicia com o header visível (no topo)
+  // Inicializa com undefined para evitar hidratação incorreta
+  const [isVisible, setIsVisible] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
-    // Recupera o estado salvo do localStorage, se houver
-    const savedState = localStorage.getItem("isAtTop");
-    if (savedState !== null) {
-      setIsAtTop(JSON.parse(savedState)); // Define o estado inicial com o valor armazenado
-    }
+    // Define o estado inicial baseado na posição do scroll
+    setIsVisible(window.scrollY === 0);
 
-    // Função de rolagem para esconder ou mostrar o header
     const handleScroll = () => {
-      const newIsAtTop = window.scrollY === 0;
-      setIsAtTop(newIsAtTop); // Atualiza o estado conforme a rolagem
-
-      // Salva o estado no localStorage
-      localStorage.setItem("isAtTop", JSON.stringify(newIsAtTop));
+      const isAtTop = window.scrollY === 0;
+      setIsVisible(isAtTop);
+      localStorage.setItem("headerVisible", JSON.stringify(isAtTop));
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Limpeza do event listener ao desmontar o componente
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Não renderiza nada até o estado ser definido
+  if (isVisible === undefined) {
+    return null;
+  }
+
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isAtTop ? "bg-transparent" : "translate-y-[-100%]" // O header some ao rolar
+      className={`fixed top-0 w-full z-50  backdrop-blur-sm transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
