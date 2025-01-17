@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Card } from "@/components/ui/card";
 import {
   Code2,
@@ -9,7 +9,6 @@ import {
   Palette,
   Settings,
   MessageCircle,
-  Target,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -21,7 +20,6 @@ const services = [
       "Planejamento personalizado e estratégico para alcançar seus objetivos de negócio.",
     buttonText: "Eu quero",
     link: "https://wa.me/+5541999189497?text=Ol%C3%A1%20*Orpheo%20Digital*%2C%20gostaria%20de%20saber%20mais%20sobre%20*Cronograma%20Estrat%C3%A9gico*!",
-    
   },
   {
     icon: <Activity className="h-6 w-6 text-accent" />,
